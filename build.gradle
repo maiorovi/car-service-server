@@ -4,6 +4,7 @@ plugins {
 
 group 'com.maiorovi'
 version '1.0-SNAPSHOT'
+def springVersion = '2.0.6.RELEASE'
 
 sourceCompatibility = 1.8
 
@@ -12,5 +13,7 @@ repositories {
 }
 
 dependencies {
-    testCompile group: 'junit', name: 'junit', version: '4.12'
+    compile group: 'org.springframework.boot', name: 'spring-boot-starter-webflux', version: springVersion
+    compile group: 'org.springframework.boot', name: 'spring-boot-starter-test', version: springVersion
+    testCompile group: 'org.junit.jupiter', name: 'junit-jupiter-api', version: '5.3.1'
 }
